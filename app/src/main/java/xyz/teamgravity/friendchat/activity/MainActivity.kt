@@ -2,9 +2,11 @@ package xyz.teamgravity.friendchat.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dagger.hilt.android.AndroidEntryPoint
 import xyz.teamgravity.friendchat.R
 import xyz.teamgravity.friendchat.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
