@@ -46,7 +46,7 @@ class LoginFragment : BindingFragment<FragmentLoginBinding>() {
 
                     LoginViewModel.LoginEvent.Success -> {
                         enable(true)
-                        findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToChannelFragment())
+                        findNavController().navigateSafely(LoginFragmentDirections.actionLoginFragmentToChannelFragment())
                     }
                 }
             }
