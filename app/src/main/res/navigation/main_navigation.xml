@@ -18,5 +18,26 @@
         android:id="@+id/channelFragment"
         android:name="xyz.teamgravity.friendchat.fragment.ChannelFragment"
         android:label="fragment_channel"
-        tools:layout="@layout/fragment_channel" />
+        tools:layout="@layout/fragment_channel" >
+        <action
+            android:id="@+id/action_channelFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_channelFragment_to_channelDialog"
+            app:destination="@id/channelDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="xyz.teamgravity.friendchat.fragment.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" >
+        <argument
+            android:name="channelId"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/channelDialog"
+        android:name="xyz.teamgravity.friendchat.fragment.ChannelDialog"
+        android:label="dialog_channel"
+        tools:layout="@layout/dialog_channel" />
 </navigation>
