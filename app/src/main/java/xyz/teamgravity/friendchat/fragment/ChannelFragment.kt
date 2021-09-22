@@ -57,7 +57,7 @@ class ChannelFragment : BindingFragment<FragmentChannelBinding>() {
             // update header
             channelListHeaderViewModel.bindView(channelListHeaderView, viewLifecycleOwner)
 
-            lifecycleScope.launchWhenStarted {
+            viewLifecycleOwner.lifecycleScope.launchWhenStarted {
                 channelViewModel.createChannelEvent.collect { event ->
                     when (event) {
                         is ChannelViewModel.ChannelEvent.Error ->

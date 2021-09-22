@@ -36,7 +36,7 @@ class LoginFragment : BindingFragment<FragmentLoginBinding>() {
     }
 
     private fun observe() {
-        lifecycleScope.launchWhenStarted {
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewmodel.loginEvent.collect { event ->
                 when (event) {
                     is LoginViewModel.LoginEvent.Error -> {
